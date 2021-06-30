@@ -13,17 +13,17 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
-    private final List<String> stringList1;
-    private final List<String> stringList2;
+    private  List<String> stringList1;
+    private  List<String> stringList2;
 
     public CustomAdapter(List<String> stringList1, List<String> stringList2) {
         this.stringList1 = stringList1;
         this.stringList2 = stringList2;
     }
-//    public void updateData(List<String> list1 ,List<String> list2 ){
-//        stringList1 = list1;
-//        stringList2 = list2;
-//    }
+    public void updateData(List<String> list1 ,List<String> list2 ){
+        stringList1 = list1;
+        stringList2 = list2;
+    }
 
     @NotNull
     @Override

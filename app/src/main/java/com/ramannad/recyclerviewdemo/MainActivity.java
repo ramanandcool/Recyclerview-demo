@@ -24,5 +24,11 @@ public class MainActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(adapter);
+        binding.button.setOnClickListener(v -> {
+            adapter.updateData(
+                Arrays.asList("Updated Title1", "Updated Title2","Updated Title3","Updated Title4","Updated Title5"),
+                Arrays.asList("text", "test", "test", "test", "test"));
+            adapter.notifyDataSetChanged();
+    });
     }
 }
